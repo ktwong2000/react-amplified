@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "welikevegan",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/tmp/amplify-44fefc7d-ad7f-4f8b-b5ef-19ffb1a0ea18/amplify/backend/api/welikevegan/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "keyDescription": "api key description",
+      "expirationTime": 30
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      }
+    ],
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-welikevegan-prod-122344-authRole",
+      "UnauthRoleArn": "arn:aws:iam::340966774293:role/amplify-welikevegan-prod-122344-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::340966774293:role/amplify-welikevegan-prod-122344-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-welikevegan-prod-122344-deployment",
+      "UnauthRoleName": "amplify-welikevegan-prod-122344-unauthRole",
+      "StackName": "amplify-welikevegan-prod-122344",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:340966774293:stack/amplify-welikevegan-prod-122344/75939680-ea07-11ec-bf8f-02b60ac8dd0a",
+      "AmplifyAppId": "d1z2v13hksxoyd",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-welikevegan-prod-122344-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "welikevegan": {}
+      },
+      "function": {
+        "welikeveganhome": {
+          "deploymentBucketName": "amplify-welikevegan-prod-122344-deployment",
+          "s3Key": "amplify-builds/welikeveganhome-4e432f75627a4169452b-build.zip"
+        },
+        "addfunction": {
+          "deploymentBucketName": "amplify-welikevegan-prod-122344-deployment",
+          "s3Key": "amplify-builds/addfunction-48546a755265386a747a-build.zip"
+        }
+      }
+    }
+  },
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-welikevegan-staging-144031-authRole",
+      "UnauthRoleArn": "arn:aws:iam::340966774293:role/amplify-welikevegan-staging-144031-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::340966774293:role/amplify-welikevegan-staging-144031-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-welikevegan-staging-144031-deployment",
+      "UnauthRoleName": "amplify-welikevegan-staging-144031-unauthRole",
+      "StackName": "amplify-welikevegan-staging-144031",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:340966774293:stack/amplify-welikevegan-staging-144031/01e07760-b813-11ec-bf43-0a449dbbe96a",
+      "AmplifyAppId": "d1z2v13hksxoyd",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-welikevegan-staging-144031-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "welikevegan": {}
+      },
+      "function": {
+        "welikeveganhome": {
+          "deploymentBucketName": "amplify-welikevegan-staging-144031-deployment",
+          "s3Key": "amplify-builds/welikeveganhome-544b6f7438584d314f57-build.zip"
+        }
+      }
+    }
+  }
+}

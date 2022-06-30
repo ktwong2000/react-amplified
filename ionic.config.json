@@ -1,0 +1,7 @@
+{
+    "name": "react-amplified",
+    "integrations": {
+      "capacitor": {}
+    },
+    "type": "react"
+  }

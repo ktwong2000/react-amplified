@@ -1,0 +1,37 @@
+
+type AggregateModel @model @auth(rules: [{allow: public}]) {
+  rating: Int! @primaryKey(sortKeyFields: ["ingredient"])
+  ingredient: String! @index(name: "byMasterModel")
+  count: Int
+}
+
+
+type MasterModel @model @auth(rules: [{allow: public}]) {
+  ingredient: String! @primaryKey
+  active: String @index(name: "searchMasterModel", sortKeyFields: ["ingredient"]) @index(name: "sortMasterModel", sortKeyFields: ["totalCount"])
+  totalCount: Int
+  AggregateModel: [AggregateModel] @hasMany(indexName: "byMasterModel", fields: ["ingredient"])
+  TransactionModel: [TransactionModel] @hasMany(indexName: "byMasterModel", fields: ["ingredient"])
+  KnownAsModel: [KnownAsModel] @hasMany(indexName: "byMasterModel", fields: ["ingredient"])
+  RelatedModel: [RelatedModel] @hasMany(indexName: "byMasterModel", fields: ["ingredient"])
+}
+
+type TransactionModel @model @auth(rules: [{allow: public}]) {
+  sourceUrl: AWSURL! @primaryKey(sortKeyFields: ["ingredient"])
+  ingredient: String! @index(name: "byMasterModel", sortKeyFields: ["rating"])
+  sourceName: String
+  title: String
+  rating: Int
+  knowAs: AWSJSON
+}
+
+
+type KnownAsModel @model @auth(rules: [{allow: public}]) {
+  ingredientKnownAs: String! @primaryKey(sortKeyFields: ["ingredient"])
+  ingredient: String! @index(name: "byMasterModel")
+}
+
+type RelatedModel @model @auth(rules: [{allow: public}]) {
+  ingredientRelated: String! @primaryKey(sortKeyFields: ["ingredient"])
+  ingredient: String! @index(name: "byMasterModel")
+}
